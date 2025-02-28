@@ -7,11 +7,11 @@ export const uploadAsset = async (file: File) =>
     if(!uploadRequest)
         return null;
 
-    const uploadStatus = processUpload(uploadRequest.url, file);
+    const uploadStatus = await processUpload(uploadRequest.url, file);
     if(!uploadStatus)
         return null;
 
-    const assetId = finalizeUpload(uploadRequest.content);
+    const assetId = await finalizeUpload(uploadRequest.content);
     if(!assetId)
         return null;
 
