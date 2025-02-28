@@ -15,6 +15,9 @@ Next, create a user that will be used for the actual uploading of the assets. It
 | M.UploadConfiguration |                                                            | Read         |
 | M.Asset               | M.Final.Lifecycle.Status = Created Created by current user | Update       |
 | M.Asset, M.File       | Created by current user                                    | Read, Create |
+| M.Collection          | *Only required when uploading to collection*               | Read         |
+
+Then add the user to this group.
 
 Then configure the environment variables for this app via your preferred method (E.G. `.env`, `.env.local`).
 
